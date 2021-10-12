@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>CHECKOUT</title>
+    <style>
+        body{
+          background: #020117;
+          cursor: url("https://img.icons8.com/small/20/ffffff/circled--v1.png"), cell;
+          font-family: 'Comic Sans MS', cursive;
+          color: #f1f1e8;
+          height:100vh; 
+        }
+        form{
+          margin:15vh;
+        }
+        fieldset{
+          border-radius: 15px;
+          position: relative;
+          background: #020117;
+        }
+        fieldset::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+          z-index: -2;
+          filter: blur(50px);
+          border-radius: 20px;
+        }
+        .sub{
+          float: left;
+          margin:2vh;
+          width:78vh;
+          border:1px solid white;
+        }
+        h3{
+          text-align: center;
+        }
+        input{
+          margin:1%;
+          border:none;
+          box-shadow: none;
+          outline: none;
+          border-bottom:2px solid white;
+          background: transparent;
+          color: #f1f1e8;
+          width: 34vh;
+          margin:2vh;
+        }
+        input:focus{
+          background: transparent;
+          box-shadow: none;
+          color: white;
+        } 
+        .stateChoose{
+          border:none;
+          box-shadow: none;
+          outline: none;
+          border-bottom:2px solid white;
+          color: white;
+          width: 34vh;
+          margin:2vh;
+          background-color: transparent;
+          height: 3vh;
+        }
+        button{
+          color: black;
+          margin-left: 43%;
+          margin-bottom:2vh;
+          width: 20vh;
+          display: block;
+          padding: 10px;
+          border-radius: 25px;
+          border:none;
+        }
+        button:hover{
+          background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+          color: white;
+        }
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+        .selectYN{
+          width:5vh;
+        }
+    </style>
+  </head>
+  <body>
+<!-- for this form, I add "require" after each input, so customer will be requries to enter all information that have list  -->
+    <form action="checkout" method="post">
+        <fieldset>
+        <legend style="font-size: 5vh;"> <img style="vertical-align: middle;"src="https://img.icons8.com/wired/64/ffffff/cash-register.png"/>	&nbsp;Checkout&nbsp;</legend>
+        <h3><img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> PHANTOM&nbsp;&nbsp;<img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> CULLINAN&nbsp;&nbsp;<img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> GHOST&nbsp;&nbsp;<img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> WRAITH&nbsp;&nbsp;<img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> DAWN&nbsp;&nbsp;<img src="https://img.icons8.com/material/12/ffffff/sphere--v1.png"/> BLACK BADGE</h3>
+
+        <div class="sub">
+          <h3>Customer Information</h3>
+          <input type="text" name="firstName" placeholder="First Name" required>
+          <input type="text" name="lastName" placeholder="Last Name"required>
+          <input type="tel"name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Phone: xxx-xxx-xxxx">
+          <input type="email"name="emailAddress" placeholder="Email Address">
+          <h3>Address</h3>
+          <input type="text" name="address" placeholder="Street Name, Apt Number"required>
+          <input type="text" name="city" placeholder="City"required>
+          <select class="stateChoose" name="state" placeholder="State"required>
+            <option value="" selected="selected">State</option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AR">AR</option>
+            <option value="AZ">AZ</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="IA">IA</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="MA">MA</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MO">MO</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="NC">NC</option>
+            <option value="NE">NE</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NV">NV</option>
+            <option value="NY">NY</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WI">WI</option>
+            <option value="WV">WV</option>
+            <option value="WY">WY</option>
+          </select>
+        <input type="charater"name="zipCode" placeholder="Zip Code"required>
+        </div>
+        <div class="sub">
+          <h3>Comfirm & Pay</h3>
+          &nbsp;&nbsp;&nbsp;&nbsp;Are you a member of us?&nbsp;&nbsp;&nbsp;&nbsp;
+          <input class="selectYN" type="radio" id="yes" name="customer" value="Yes"required>
+          <label for="yes">Yes</label>
+          <input class="selectYN" type="radio" id="no" name="customer" value="No"required>
+          <label for="no">No</label> <br>
+          <input type="text" name="model" placeholder="Model Name"required>
+          <select class= "stateChoose" name="quantity" placeholder="Quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <h3>Card Information</h3>
+          <input type="password"name="cardNumber" placeholder="Card Number"required>
+          <input type="month" name="expire" placeholder="Expiration Date: MM/YYYY"required>
+          <label style="margin-left: 10px;"for="todat">Today's date:</label>
+          <input type="date" id="date" name="today" required>
+        </div>
+        <button type="submit">Submit Order</button>
+    </fieldset>
+    </form>
+  </body>
+</html>
