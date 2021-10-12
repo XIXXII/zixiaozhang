@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Guessing A Number</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project3.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="left">
+      <img src="image/higher.jpg" alt="higher score">
+      <div class="scoreBox">
+        <div class="text score" id="outputScore">
+          0
+        </div>
+        <div class="outputScore"></div>
+      </div>
+    </div>
+
+    <div class="right">
+      <a href="#"><img src="image/play.jpg" alt="Play Again" id = "playAgain"></a>
+      <img src="image/laying.jpg">
+    </div>
+    <hr>
+    <p class="think" id="image"></p>
+    <hr>
+  </div>
+  <div class="body">
+    <img class="pic1" src="https://media.giphy.com/media/dwLZsOH6wJ6LRpOKqm/giphy.gif" alt="rule">
+    <div class="rule">
+      Guessing a number between 1 ~ 100
+    </div>
+    <div class="bottom">
+      <img class="gif" src="https://media.giphy.com/media/Cm0mFM2xhz7QhIf3lr/giphy.gif" alt="Let's get it">
+      <p id="current">Chance left: 10</p>
+      <progress id="bar" value="100" max="100"></progress>
+    </div>
+  </div>
+  <div class="body">
+    <br><br>
+    <h2 id="totalScore">Let's get starting......</h2>
+    <input class="input" type="text" onfocus="this.value=''" id="number">
+    <input class="check" type="submit" value="" onclick="getValue();" id="next">
+
+  </div>
+
+  <div class="footer">
+    2021@Project3 by ZiXiao Zhang & Linlin Zhu
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
