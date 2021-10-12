@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditItemActivity"
+    android:background="#43658B">
+
+    <Button
+        android:id="@+id/backSelectList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/transparent"
+        android:drawableLeft="@drawable/left"
+        android:fontFamily="sans-serif-black"
+        android:text="Back to list"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/lo222"
+        android:layout_width="190dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backSelectList"
+        app:srcCompat="@drawable/counter" />
+
+    <LinearLayout
+        android:id="@+id/bottomPart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bg_halfcorner"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lo222">
+
+        <TextView
+            android:id="@+id/nothing2"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/loading__1_"
+            android:fontFamily="@font/days_one"
+            android:padding="15dp"
+            android:text=" Editing . . "
+            android:textColor="#9BA4B4"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/nameforEdit"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:drawableStart="@drawable/point_right"
+            android:fontFamily="@font/vast_shadow"
+            android:padding="10dp"
+            android:text="Name goes Here"
+            android:textAlignment="center"
+            android:textColor="#557571"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_da"
+                android:text="Quantity: "
+                android:textColor="#7e8a97"
+                android:textSize="28sp" />
+
+            <ImageButton
+                android:id="@+id/addDecr"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/decrease"
+                android:onClick="amountDec" />
+
+            <EditText
+                android:id="@+id/amountForChange"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="195dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/capriola"
+                android:inputType="numberSigned"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#7e8a97"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/addIncr"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="245dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/increase"
+                android:onClick="amountInc" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/doneEditing"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="150dp"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="FINISH"
+            android:textSize="24sp"
+            app:cornerRadius="20dp" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/chelsea_market"
+            android:text="Do you want to delete this item?"
+            android:textAlignment="center"
+            android:textColor="#e97171"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/deleteSelectItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="150dp"
+            android:backgroundTint="#ed6663"
+            android:fontFamily="@font/baloo_da"
+            android:onClick="deleteItem"
+            android:text="Yes"
+            android:textSize="24sp"
+            app:cornerRadius="50dp" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

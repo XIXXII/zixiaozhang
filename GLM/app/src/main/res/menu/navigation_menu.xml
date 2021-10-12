@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/renameBtn"
+        android:icon="@drawable/rename"
+        android:onClick="selectionOnPopupMenu"
+        android:title="Rename List" />
+
+    <item
+        android:id="@+id/checkAllBtn"
+        android:icon="@drawable/check"
+        android:onClick="selectionOnPopupMenu"
+        android:title="Check All Items" />
+
+    <item
+        android:id="@+id/uncheckBtn"
+        android:icon="@drawable/uncheck"
+        android:onClick="selectionOnPopupMenu"
+        android:title="Unchecked All Items" />
+
+    <item
+        android:id="@+id/deleteBtn"
+        android:icon="@drawable/delete"
+        android:onClick="selectionOnPopupMenu"
+        android:title="Delete List" />
+    <item
+        android:id="@+id/deleteAllItemBtn"
+        android:icon="@drawable/de"
+        android:onClick="selectionOnPopupMenu"
+        android:title="Delete All Items" />
+
+</menu>

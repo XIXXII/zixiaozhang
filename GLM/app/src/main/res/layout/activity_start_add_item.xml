@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartAddItemActivity"
+    android:background="#43658B">
+
+
+    <Button
+        android:id="@+id/backPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/left"
+        android:fontFamily="sans-serif-black"
+        android:text="Search Page"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="backNameSearch"/>
+
+    <ImageView
+        android:id="@+id/lo222"
+        android:layout_width="182dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backPage"
+        app:srcCompat="@drawable/addtoists" />
+
+    <LinearLayout
+        android:id="@+id/bottomPart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bg_halfcorner"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lo222">
+
+        <TextView
+            android:id="@+id/nothing2"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/loading__1_"
+            android:fontFamily="@font/days_one"
+            android:padding="15dp"
+            android:text=" Adding . . ."
+            android:textColor="#9BA4B4"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_da"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:textSize="28sp"
+                android:textColor="#7e8a97"
+                android:text="Name: " />
+
+            <TextView
+                android:id="@+id/realName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/baloo_da"
+                android:textColor="#43658b"
+                android:text="Mango"
+                android:textSize="35sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_da"
+                android:text="Quantity: "
+                android:textColor="#7e8a97"
+                android:textSize="28sp" />
+
+            <ImageButton
+                android:id="@+id/addDecrease"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/decrease"
+                android:onClick="amountDecrease"/>
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="195dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/capriola"
+                android:inputType="numberSigned"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#7e8a97"
+                android:textSize="30sp"/>
+
+            <ImageButton
+                android:id="@+id/addIncrease"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="245dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/increase"
+                android:onClick="amountIncrease"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/doneAdding"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="150dp"
+            android:drawableLeft="@drawable/basket2"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/bungee_inline"
+            android:text="FINISH"
+            android:textSize="24sp"
+            app:cornerRadius="50dp"
+            android:onClick="doneWithAdding"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

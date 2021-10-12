@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateListActivity">
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="179dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/merienda_bold"
+        android:text="Create List"
+        android:textColor="#43658b"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/createConfirm"
+        android:layout_width="117dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#43658b"
+        android:onClick="createNewList"
+        android:text="Confirm"
+        app:cornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewList" />
+
+    <Button
+        android:id="@+id/createCancel"
+        android:layout_width="117dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="#43658b"
+        android:onClick="cancelCreateList"
+        android:text="Cancel"
+        app:cornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewList" />
+
+    <EditText
+        android:id="@+id/NewList"
+        android:layout_width="345dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Define your new list name"
+        android:inputType="textPersonName"
+        android:textColor="#43658b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="4dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:background="#43658b"
+        app:layout_constraintStart_toEndOf="@+id/Logo2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Logo2"
+        android:layout_width="116dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

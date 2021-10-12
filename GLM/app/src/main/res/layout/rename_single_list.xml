@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#4e89ae">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="62dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/white" />
+
+    <TextView
+        android:id="@+id/renameHearder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:fontFamily="@font/merienda_bold"
+        android:text="Rename List"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/renameCurrentList"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="85dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Give a new name to your list"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/renameOneConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#ffffff"
+        android:text="Confirm"
+        android:textColor="#000000"
+        app:cornerRadius="35dp" />
+
+    <Button
+        android:id="@+id/renameOneCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#ffffff"
+        android:text="Cancel"
+        android:textColor="#000000"
+        app:cornerRadius="35dp" />
+
+</RelativeLayout>

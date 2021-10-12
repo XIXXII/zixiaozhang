@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/listHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#43658b"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backHome"
+        android:layout_width="64dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:onClick="cancelManagerList"
+        app:layout_constraintStart_toStartOf="@id/listHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/detailListName"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/merienda_bold"
+        android:padding="2dp"
+        android:text="List Name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/mangerSelction"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toEndOf="@+id/backHome"
+        app:layout_constraintTop_toTopOf="@+id/listHeader" />
+
+    <ImageButton
+        android:id="@+id/mangerSelction"
+        android:layout_width="67dp"
+        android:layout_height="54dp"
+        android:background="@android:color/transparent"
+        android:onClick="showManageMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+    <ExpandableListView
+        android:id="@+id/type_item"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="6dp"
+        android:childDivider="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listHeader"
+        android:groupIndicator="@color/transparent"
+        />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="115dp"
+        android:backgroundTint="#43658b"
+        android:onClick="addItemToList"
+        android:text="Add New"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

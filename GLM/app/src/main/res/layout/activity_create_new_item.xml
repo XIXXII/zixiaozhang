@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewItemActivity"
+    android:background="#43658B">
+
+
+    <Button
+        android:id="@+id/backSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/left"
+        android:fontFamily="sans-serif-black"
+        android:text="Search Page"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:background="@color/transparent"
+        android:onClick="backtoSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/lo222"
+        android:layout_width="182dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backSearch"
+        app:srcCompat="@drawable/createnew" />
+
+    <LinearLayout
+        android:id="@+id/bottomPart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bg_halfcorner"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lo222">
+
+        <TextView
+            android:id="@+id/nothing2"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/loading__1_"
+            android:fontFamily="@font/days_one"
+            android:padding="20dp"
+            android:text=" Creating . ."
+            android:textColor="#9BA4B4"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_da"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:textSize="28sp"
+                android:textColor="#7e8a97"
+                android:text="Name: " />
+
+            <EditText
+                android:id="@+id/realName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/days_one"
+                android:hint="Item Name"
+                android:textAlignment="center"
+                android:textColor="#43658b"
+                android:textSize="25sp"
+                android:singleLine="true"
+                android:inputType="text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_da"
+                android:text="Select Category： "
+                android:textColor="#7e8a97"
+                android:textSize="28sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/spinner_style"
+                android:textAlignment="center" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="150dp"
+            android:drawableLeft="@drawable/add_database"
+            android:fontFamily="@font/bungee_inline"
+            android:paddingStart="20dp"
+            android:text="CREATE"
+            android:textSize="24sp"
+            app:cornerRadius="50dp"
+            android:onClick="finishCreate"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

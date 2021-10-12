@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_add">
+
+    <TextView
+        android:id="@+id/askDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/bungee_inline"
+        android:lineSpacingExtra="2dp"
+        android:text="Are you sure you want to  lists?"
+        android:textAlignment="center"
+        android:textColor="#6e6d6d"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/confirmDeleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#e3dfc8"
+        android:text="CONFIRM"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        app:cornerRadius="15dp" />
+
+    <Button
+        android:id="@+id/cancelDeleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#e3dfc8"
+        android:text="CANCEL"
+        android:textColor="#000000"
+        app:cornerRadius="15dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/alert" />
+
+</RelativeLayout>
